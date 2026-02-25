@@ -1,0 +1,34 @@
+SQL> create table deposit(
+  2  actno varchar2(15),
+  3  cname varchar2(15),
+  4  bname varchar2(15),
+
+  5  amount number(9,2),
+  6  adate date )
+  7  ;
+
+Table created.
+
+SQL> desc deposit;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ACTNO                                              VARCHAR2(15)
+ CNAME                                              VARCHAR2(15)
+ BNAME                                              VARCHAR2(15)
+ AMOUNT                                             NUMBER(9,2)
+ ADATE                                              DATE
+
+SQL> insert into deposit values(100,'anil','vttt','4444','06-jan-2000');
+
+1 row created.
+
+SQL> desc deposit;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ACTNO                                              VARCHAR2(15)
+ CNAME                                              VARCHAR2(15)
+ BNAME                                              VARCHAR2(15)
+ AMOUNT                                             NUMBER(9,2)
+ ADATE                                              DATE
+
+SQL> spool off;
