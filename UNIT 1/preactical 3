@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float num, total = 0, average;
+
+    // Input number of elements
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    // Loop to input elements
+    for(i = 1; i <= n; i++) {
+        printf("Enter element %d: ", i);
+        scanf("%f", &num);
+        total = total + num;
+    }
+
+    // Calculate average
+    average = total / n;
+
+    // Output results
+    printf("Total = %.2f\n", total);
+    printf("Average = %.2f\n", average);
+
+    return 0;
+}
+
+
+Input:
+Enter number of elements: 5
+Enter element 1: 10
+Enter element 2: 20
+Enter element 3: 30
+Enter element 4: 40
+Enter element 5: 50
+
+Ouput:
+Total = 150.00
+Average = 30.00

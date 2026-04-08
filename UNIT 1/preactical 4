@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(){
+    int n,i;
+    float a[100],sum=0,avg;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%f",&a[i]);
+        sum+=a[i];
+    }
+    avg=sum/n;
+    printf("Total=%.2f\nAverage=%.2f",sum,avg);
+}
+
+
+Input
+Enter N: 3
+Elements: 10 20 30
+
+Output
+Total = 60
+Average = 20

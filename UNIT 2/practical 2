@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+struct student {
+    int rollno;
+    char name[20];
+    float score;
+    int year;
+};
+
+int main() {
+    struct student s[5];
+    int i;
+
+    // Input
+    for(i=0;i<5;i++){
+        printf("Enter Roll, Name, Score, Year: ");
+        scanf("%d %s %f %d",&s[i].rollno,s[i].name,&s[i].score,&s[i].year);
+    }
+
+    // Output
+    printf("\nStudent Details:\n");
+    for(i=0;i<5;i++){
+        printf("%d %s %.2f %d\n",s[i].rollno,s[i].name,s[i].score,s[i].year);
+    }
+}
+
+
+Input
+101 John 7.5 2019
+102 Alex 6.0 2020
+103 Bob 8.2 2019
+104 Sam 5.5 2021
+105 Leo 9.0 2019
+
+Output
+101 John 7.50 2019
+102 Alex 6.00 2020
+103 Bob 8.20 2019
+104 Sam 5.50 2021
+105 Leo 9.00 2019

@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    FILE *fp;
+    char data[100];
+
+    // Step 1: Open file in write mode
+    fp = fopen("sample.txt", "w");
+
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        exit(1);
+    }
+
+    // Step 2: Take input from user
+    printf("Enter some text: ");
+    fgets(data, sizeof(data), stdin);
+
+    // Step 3: Write data to file
+    fprintf(fp, "%s", data);
+
+    fclose(fp);
+
+    // Step 4: Open file in read mode
+    fp = fopen("sample.txt", "r");
+
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        exit(1);
+    }
+
+    // Step 5: Read and display content
+    printf("\nContent of file:\n");
+
+    while (fgets(data, sizeof(data), fp) != NULL) {
+        printf("%s", data);
+    }
+
+    fclose(fp);
+
+    return 0;
+}
+
+
+Sample Output
+Enter some text: Hello, this is my file program
+
+Content of file:
+Hello, this is my file program

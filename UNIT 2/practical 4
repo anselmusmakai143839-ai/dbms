@@ -1,0 +1,18 @@
+for(int i=0;i<5;i++){
+    for(int j=i+1;j<5;j++){
+        if(s[i].score < s[j].score){
+            struct student temp=s[i];
+            s[i]=s[j];
+            s[j]=temp;
+        }
+    }
+}
+
+
+
+Output
+Leo 9.00
+Bob 8.20
+John 7.50
+Alex 6.00
+Sam 5.50

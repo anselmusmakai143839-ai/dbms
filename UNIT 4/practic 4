@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    char str[100];
+
+    fp = fopen("file.txt", "a");
+
+    printf("Enter text to append: ");
+    fgets(str, sizeof(str), stdin);
+
+    fprintf(fp, "%s", str);
+
+    fclose(fp);
+
+    return 0;
+}
+
+
+Input
+Enter text to append: Hello Students
+
+Output 
+Existing Data
+Hello Students

@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+    printf("Number of arguments: %d\n", argc);
+
+    for (int i = 0; i < argc; i++) {
+        printf("%s\n", argv[i]);
+    }
+
+    return 0;
+}
+
+
+Input (run)
+program hello world C
+
+Output
+Number of arguments: 4
+program
+hello
+world
+C

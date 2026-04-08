@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+struct date {
+    int d,m,y;
+};
+
+int main(){
+    struct date a,b;
+
+    printf("Enter date1 (dd mm yyyy): ");
+    scanf("%d %d %d",&a.d,&a.m,&a.y);
+
+    printf("Enter date2 (dd mm yyyy): ");
+    scanf("%d %d %d",&b.d,&b.m,&b.y);
+
+    if(a.d==b.d && a.m==b.m && a.y==b.y)
+        printf("Equal");
+    else
+        printf("Not Equal");
+}
+
+
+Output
+Equal

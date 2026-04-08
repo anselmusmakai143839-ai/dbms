@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void maxmin(int a[], int n, int *max, int *min){
+    *max = *min = a[0];
+    for(int i=1;i<n;i++){
+        if(a[i]>*max) *max=a[i];
+        if(a[i]<*min) *min=a[i];
+    }
+}
+
+int main(){
+    int a[5]={5,2,9,1,7}, max,min;
+    maxmin(a,5,&max,&min);
+    printf("Max=%d Min=%d",max,min);
+}
+
+
+Output:
+Max=9 Min=1

@@ -1,0 +1,13 @@
+void print2019(struct student s[]){
+    for(int i=0;i<5;i++){
+        if(s[i].year == 2019){
+            printf("%s\n",s[i].name);
+        }
+    }
+}
+
+
+Output
+John
+Bob
+Leo

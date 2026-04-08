@@ -1,0 +1,4 @@
+if(strcmp(a,b)==0)
+    printf("Same");
+else
+    printf("Not Same");

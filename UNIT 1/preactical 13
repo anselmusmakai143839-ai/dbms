@@ -1,0 +1,14 @@
+// without function
+int len=0;
+while(str[len]!='\0') len++;
+
+// with function
+#include <string.h>
+strlen(str);
+
+
+Input
+String: hello
+
+Output
+Length = 5

@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+struct emp {
+    int code;
+    char name[20];
+    float salary;
+};
+
+int main() {
+    FILE *fp;
+    struct emp e, max;
+
+    fp = fopen("emp.txt", "w");
+
+    for (int i = 0; i < 3; i++) {
+        scanf("%d %s %f", &e.code, e.name, &e.salary);
+        fprintf(fp, "%d %s %f\n", e.code, e.name, e.salary);
+    }
+    fclose(fp);
+
+    fp = fopen("emp.txt", "r");
+
+    fscanf(fp, "%d %s %f", &max.code, max.name, &max.salary);
+
+    while (fscanf(fp, "%d %s %f", &e.code, e.name, &e.salary) != EOF) {
+        if (e.salary > max.salary)
+            max = e;
+    }
+
+    printf("Highest Salary: %s %.2f", max.name, max.salary);
+
+    fclose(fp);
+    return 0;
+}
+
+
+Input
+101 John 25000
+102 Alice 30000
+103 Bob 20000
+
+Output
+Highest Salary: Alice 30000.00

@@ -1,0 +1,36 @@
+// Check positive/negative
+        if(num > 0)
+            positive++;
+        else if(num < 0)
+            negative++;
+
+        // Check even/odd
+        if(num % 2 == 0)
+            even++;
+        else
+            odd++;
+    }
+
+    // Output results
+    printf("Positive numbers = %d\n", positive);
+    printf("Negative numbers = %d\n", negative);
+    printf("Even numbers = %d\n", even);
+    printf("Odd numbers = %d\n", odd);
+
+    return 0;
+}
+
+imput:
+Enter number of elements: 6
+Enter element 1: 10
+Enter element 2: -5
+Enter element 3: 0
+Enter element 4: 7
+Enter element 5: -8
+Enter element 6: 3
+
+output:
+Positive numbers = 3
+Negative numbers = 2
+Even numbers = 3
+Odd numbers = 

@@ -1,0 +1,27 @@
+float f;
+};
+
+struct data2 {
+    int i;
+    float f;
+};
+
+int main(){
+    union data u;
+    struct data2 s;
+
+    u.i = 10;
+    u.f = 5.5; // overwrite
+
+    s.i = 10;
+    s.f = 5.5;
+
+    printf("Union: %d %.2f\n",u.i,u.f);
+    printf("Structure: %d %.2f\n",s.i,s.f);
+}
+
+
+
+Output
+Union: (garbage) 5.50
+Structure: 10 5.50

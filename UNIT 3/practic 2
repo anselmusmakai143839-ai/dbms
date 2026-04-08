@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void area(float *r){
+    float a = 3.14 * (*r) * (*r);
+    printf("Area = %.2f",a);
+}
+
+int main(){
+    float r=5;
+    area(&r);
+}
+
+
+Output:
+Area = 78.50

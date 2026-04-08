@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+void quickSort(int arr[], int low, int high) {
+    int i = low, j = high, pivot = arr[(low + high)/2], temp;
+
+    while(i <= j) {
+        while(arr[i] < pivot) i++;
+        while(arr[j] > pivot) j--;
+
+        if(i <= j) {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++; j--;
+        }
+    }
+
+    if(low < j)
+        quickSort(arr, low, j);
+    if(i < high)
+        quickSort(arr, i, high);
+}
+
+int main() {
+    int n, arr[100];
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter elements:\n");
+    for(int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    quickSort(arr, 0, n-1);
+
+    printf("Sorted array:\n");
+    for(int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    return 0;
+}
+
+
+Input
+Enter number of elements: 5
+Enter elements:
+10 7 8 9 1
+
+Output
+Sorted array:
+1 7 8 9 10

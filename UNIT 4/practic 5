@@ -1,0 +1,28 @@
+int main() {
+    FILE *fp1, *fp2;
+    char str[100];
+
+    fp1 = fopen("greencity.txt", "w");
+    fprintf(fp1, "Hello Green City");
+    fclose(fp1);
+
+    fp1 = fopen("greencity.txt", "r");
+    fgets(str, sizeof(str), fp1);
+    fclose(fp1);
+
+    fp2 = fopen("cleancity.txt", "w");
+
+    for (int i = strlen(str)-1; i >= 0; i--) {
+        fputc(str[i], fp2);
+    }
+
+    fclose(fp2);
+    return 0;
+}
+
+
+Input 
+Green City
+
+Output
+ytiC neerG

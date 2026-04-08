@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+struct complex {
+    int real, imag;
+};
+
+struct complex add(struct complex a, struct complex b){
+    struct complex c;
+    c.real = a.real + b.real;
+    c.imag = a.imag + b.imag;
+    return c;
+}
+
+int main(){
+    struct complex a={2,3}, b={4,5}, c;
+    c = add(a,b);
+    printf("Sum = %d + %di",c.real,c.imag);
+}
+
+
+Output
+Sum = 6 + 8i
